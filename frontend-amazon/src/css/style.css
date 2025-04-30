@@ -1,0 +1,241 @@
+@import url(variaveis.css);
+
+/*----------- Configurações Globais -----------*/
+
+
+body {
+  font-family: var(--fontPadrao);
+  background-color: var(--CorFundoPrincipal)
+}
+
+/*----------- Menu Principal: Logo -----------*/
+
+/*--> Config display centralizado */
+.logo-api {
+  display: flex;
+  justify-content: center;
+}
+
+/*--> Config imagem -> logo 'API AMAZON' */
+.logo-api img {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/*--> Ao passar mouse : Efeito de sombra */
+.logo-api:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+/*----------- Container Principal: Formulario, Resultado, Cards e alertas -----------*/
+
+/*--> Config container principal -> Definição de Layout, tamanho maximo, cores e bordas */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 1024px;
+  max-width: 1024px;
+  
+  font-family: var(--fontResultadoCard);
+
+  background-color: var(--CorBranco);
+  border-radius: 30px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/*----------- Formulario -----------*/
+
+/*--> Config layout formulario */
+.form-api {
+  display: flex;
+}
+
+/*--> Config texto 'h2' do formulario */
+.form-api h2 {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/*--> Config Input do formulario */
+.form-api input{
+  width: 350px;
+  padding: 10px;
+  margin-right: 10px;
+
+  font-size: 20px;
+  border-radius: 7px;
+  border: 1px solid var(--CorBordasCinzas);
+}
+
+/*--> Config Button do formulario */
+.form-api button{
+  width: 120px;
+  padding: 10px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border-radius: 7px;
+  border: 1px solid var(--CorBordasCinzas);
+  cursor: pointer;
+}
+
+/*----------- DIV : Resultado da pesquisar -----------*/
+
+/*--> Config layout global: maximo e Scroll dos 'Resultados' */
+.container-resultado {
+  overflow-y: auto;
+  max-height: 750px;
+}
+
+/*--> Config resultado de busca : Palavra-Chave */
+.resultado-header {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 30px;
+
+  margin-top: 10px;
+  margin-bottom: -13px;
+}
+
+/*--> Config Palavra-Chave: Negrito destacando */
+.resultado-span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*--> Config layout que aprensenta os cards,
+Definição de tamaho, margens e Wrap para não passar da div pai */
+.resultado {
+  width: 100%;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;  
+}
+
+/*--> Config tamanho e margens dos 'CARDS' */
+.card-resultado {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+}
+
+/*--> Config da Imagem dentro dos 'CARDS' */
+.card-resultado img {
+  width: 100%; 
+  height: 200px;
+  object-fit: contain;
+}
+
+/*--> Config do texto 'H3' dentro dos 'CARDS' */
+.card-resultado h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/*--> Config do 'Preço' dentro dos 'CARDS' */
+.card-resultado .preco {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/*----------- Resultado: Retorno Falha Servidor -----------*/
+
+.resultado-falha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90%;
+  max-width: 850px;
+  padding: 20px 15px;
+  border-radius: 25px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  background: rgba(253, 253, 48, 0.8); /* amarelo bem suave com transparência */
+  border: 2px solid rgba(255, 255, 0, 0.8); /* borda amarela translúcida */
+
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+}
+
+/*----------- Alerta -----------*/
+
+/*--> Estilização "DIV" mensagem de Alerta */
+.msg-alert {
+  position: relative;
+  width: 500px;
+
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  
+  padding: 5px 15px;
+  margin: 10px;
+  
+  background-color: rgb(255, 255, 0);
+  border: 1px solid rgb(190, 189, 189);
+  border-radius: 15px;
+}
+
+/*--> Estilização btn 'X' fechar da "DIV" */
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 1px;
+
+  background: transparent;
+  border: none;
+
+  font-size: 25px;
+  color: #000000;
+  cursor: pointer;
+}
+
+
+/*----------- Loader -----------*/
+
+/*--> Estilização "DIV LOADER" */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db; /* Cor do loader */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}

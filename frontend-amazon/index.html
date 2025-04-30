@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/svg/api-amazon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Amazon - Rafael Silva</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    
+    <div class="logo-api">
+      <img src="img/logo-amazon.png" title="Logo - Api Amazon" alt="logo-amazon" />
+    </div>
+
+    <div class="container">
+
+      <form class="form-api" id="buscarProduto">
+        <h2>Palavra chave :</h2>
+        <input type="text" name="keyword" placeholder="Digite uma palavra-chave..."/>
+        <button type="submit">Pesquisar</button>
+      </form>
+
+      <div class="container-resultado">
+
+        <div class="resultado-header"></div>
+        
+        <div class="resultado" id="resultado"></div>
+        
+        <div id="resultado-falha"></div>
+        
+      </div>
+
+    </div>
+    <div id="loader" class="loader hidden"></div>
+
+    <script type="module" src="src/js/main.js"></script>
+
+    <!-- Função para fechar mensagem de alerta -->
+    <script>
+      function fecharAlerta() {
+        const alertBox = document.getElementById("alertBox");
+        console.log(alertBox);
+        if (alertBox) {
+          alertBox.style.display = "none";
+        }
+      }
+    </script>
+
+  </body>
+</html>
