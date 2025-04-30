@@ -4,7 +4,9 @@ Este projeto é uma aplicação fullstack simples que permite buscar produtos di
 
 ## 📸 Demonstração
 
-![Imagem da Interface](frontend-amazon/public/img/logo-amazon.png)
+<p align="center">
+    <img src="frontend-amazon/public/img/logo-amazon.png" alt="Imagem da Interface" width="250"/>
+</p>
 
 ## 📦 Tecnologias Utilizadas
 
