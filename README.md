@@ -85,7 +85,7 @@ npm run dev
     │
     ├── README.md
 ```
-<<<<<<< HEAD
+
 ## 🧠 Considerações Finais
 Este projeto foi desenvolvido para fins educacionais e demonstração prática de scraping com Node.js, utilizando Express, Cheerio e Axios.
 O código foi baseado em um teste de processo seletivo, com o objetivo de demonstrar conhecimento técnico nas ferramentas utilizadas.
@@ -102,6 +102,5 @@ Feito com 💻 por Rafael Silva
 - 🎥 YouTube: Programador da Silva : https://www.youtube.com/@ProgramadordaSilva
 - 💼 LinkedIn: Rafael Silva : https://www.linkedin.com/in/rafaelsantana27/
 
-📂 Código disponível para estudos e aprimoramentos.
-=======
->>>>>>> 5c805794f15d08a714e7d0100cc0aed32b187cbe
+### 📂 Código disponível para estudos e aprimoramentos.
+
