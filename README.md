@@ -9,7 +9,7 @@ Este projeto é uma aplicação fullstack simples que permite buscar produtos di
         src="frontend-amazon/public/img/logo-amazon.png" 
         alt="Imagem da Interface" 
         width="250"
-        style="border-radius: 50%; border: 4px solid #1b232e; background-color: #1b232e;"
+        style="border-radius: 50%; border: 4px solid #1b232e; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);"
     />
 </p>
 
